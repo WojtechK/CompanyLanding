@@ -1,0 +1,67 @@
+@import './_variables';
+
+.header {
+    height: 100vh;
+    background: url('../assets/header.jpg') center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .logo {
+        height: 10%;
+        width: 50%;
+        margin-top: 5%;
+        font-size: 32px;
+        font-weight: 600;    
+        color: $theme;
+        display: flex;
+        justify-content: center;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .menu {
+        height: 5%;
+        width: 50%;
+        margin-top: 5%;
+        display: flex;
+        .menu-items {
+            width: 100%;
+            list-style: none;     
+            display: flex;
+            justify-content: space-evenly;
+            li {
+                font-size: 20px;
+                font-weight: 600;
+                &:hover {
+                    cursor: pointer;
+                }
+                a {
+                    color: $font-color;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    position: relative;
+                    &:after {    
+                        bottom: 1;
+                        content: "";
+                        display: block;
+                        height: 8px;
+                        left: 20%;
+                        position: absolute;
+                        background: $theme;
+                        transition: width 0.2s ease-in-out 0s, left 0.2s;
+                        border-radius: 20px;
+                        width: 0;
+                      }
+                      &:hover:after { 
+                        width: 100%; 
+                        left: 20%; 
+                      }
+                      &:active {
+                          color: $theme;
+                      }
+                }              
+            }
+        }
+    }
+}

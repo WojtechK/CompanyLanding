@@ -1,0 +1,52 @@
+@import './_variables';
+
+.about-company {
+    .intro {
+        height: 270px;
+        background: $background-secondary;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: $white;
+        p { 
+           
+            font-size: 26px;
+            letter-spacing: 2px;
+        }
+        button { 
+            background: $background-secondary;
+            padding: 15px 30px;
+            position: relative;
+            border: none;
+            transition: ease-in-out .2s;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                border-radius: 28px;
+                background: rgba($theme, .5);
+                width: 56px;
+                height: 56px;
+                transition: all .3s ease;
+            }
+            a {
+                position: relative;
+                vertical-align: middle;
+                color: $white;
+                font-size: 20px;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-weight: 600;             
+            }
+            &:hover { 
+                cursor: pointer;
+                &:before {
+                    width: 100%;
+                    background: rgba($theme, 1);
+                }
+        }
+    }
+    }
+}
