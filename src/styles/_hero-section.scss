@@ -1,0 +1,219 @@
+@import "./shared/variables";
+
+#hero-section {
+  height: 100svh;
+  width: 100%;
+  background-color: #111;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    background-image: url("../assets/header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.55;
+    animation: hero-section-distancing 20s infinite;
+  }
+
+  .header {
+    height: 60px;
+    width: inherit;
+    z-index: 2;
+    position: inherit;
+    .menu {
+      width: inherit;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: inherit;
+      transition: $transition-time ease-in;
+
+      &-sticky {
+        position: fixed;
+        background-color: $background-secondary;
+        margin-top: 0;
+        box-shadow: 4px 2px 8px gray;
+      }
+
+      .menu-items {
+        width: 50%;
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+
+        li {
+          &:hover {
+            cursor: pointer;
+          }
+
+          a {
+            font-size: 20px;
+            color: $white;
+            text-transform: lowercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+            position: relative;
+
+            &:after {
+              bottom: 1;
+              content: "";
+              display: block;
+              height: 8px;
+              left: 20%;
+              position: absolute;
+              background: $theme;
+              transition: width 0.2s ease-in-out 0s, left 0.2s;
+              transform: skewX(40deg);
+              width: 0;
+            }
+
+            &:hover:after {
+              width: 100%;
+              left: 20%;
+            }
+
+            &:active {
+              color: $theme;
+            }
+          }
+        }
+      }
+
+      .hamburger {
+        display: none;
+        margin-right: 10%;
+        transition: $transition-time ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+          transform: translateX(-16px);
+        }
+
+        svg {
+          fill: $theme;
+        }
+      }
+
+      @media (max-width: $Large) {
+        .hamburger {
+          display: flex;
+        }
+
+        .menu-items li {
+          display: none;
+        }
+
+        .menu-items.responsive {
+          position: absolute;
+          right: 0;
+          top: 0;
+          background-color: $background-secondary;
+        }
+      }
+    }
+
+    .logo {
+      position: absolute;
+      width: 50%;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      font-weight: 600;
+      color: $theme;
+      display: flex;
+      justify-content: center;
+      transition: $transition-time;
+    }
+  }
+
+
+  .intro {
+    width: 100%;
+    display: flex;
+    color: $white;
+    position:absolute;
+  top: 0;
+  bottom: 0;
+
+    .intro-content {
+      max-width: 800px;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
+
+      p {
+        font-size: 26px;
+        line-height: 36px;
+        letter-spacing: 1px;
+        text-align: center;
+        margin: 24px 64px;
+      }
+
+      button {
+        width: 140px;
+        background: none;
+        padding: 15px 30px;
+        position: relative;
+        border: none;
+        transition: ease-in-out $transition-time;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          border-radius: 28px;
+          background: rgba($theme, 1);
+          width: 140px;
+          height: 56px;
+          transition: $transition-time;
+        }
+
+        a {
+          position: relative;
+          vertical-align: middle;
+          color: $white;
+          font-size: 20px;
+          text-transform: uppercase;
+          text-decoration: none;
+          text-shadow: 1px 1px 4px $font-color;
+        }
+
+        &:hover {
+          cursor: pointer;
+
+          &:before {
+            transform: scale(1.05)
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes hero-section-distancing {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,52 +1,69 @@
-@import './_variables';
+@import './shared/variables';
+@import './shared/mixins';
 
-.about-company {
-    .intro {
-        height: 270px;
-        background: $background-secondary;
+#about {       
+    padding: 84px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .description-text {
+        max-width: 800px;
+        margin: 0 84px; 
         display: flex;
-        justify-content: space-evenly;
         align-items: center;
-        color: $white;
-        p { 
-           
-            font-size: 26px;
-            letter-spacing: 2px;
-        }
-        button { 
-            background: $background-secondary;
-            padding: 15px 30px;
-            position: relative;
-            border: none;
-            transition: ease-in-out .2s;
-            &:before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: block;
-                border-radius: 28px;
-                background: rgba($theme, .5);
-                width: 56px;
+        padding-bottom: 84px;
+        
+        @include paragraph-typography;
+    }
+
+    .offer-description {
+        max-width: 800px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: auto;
+
+        .offer-item {
+            width: 45%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            box-sizing: border-box;
+            padding: 0 20px;
+            box-shadow: 4px 4px 4px gray;
+            border-radius: 16px;
+            margin: 16px;
+
+            svg {
+                fill: $theme;
                 height: 56px;
-                transition: all .3s ease;
+                width: 56px;
             }
-            a {
-                position: relative;
-                vertical-align: middle;
-                color: $white;
-                font-size: 20px;
-                text-transform: uppercase;
-                text-decoration: none;
-                font-weight: 600;             
+
+            p {
+                max-width: 80%;
+                height: auto;
+                @include paragraph-typography;
             }
-            &:hover { 
-                cursor: pointer;
-                &:before {
-                    width: 100%;
-                    background: rgba($theme, 1);
-                }
         }
     }
+
+    &::after {
+        // content: "";
+        // background-size: cover;
+        // background-position: bottom;
+        // background: url('../assets/description.jpg') bottom;
+        // background-attachment: fixed;
+        // background-size: 100%;
+        // opacity: 0.1;
+        // top: 0;
+        // left: 0;
+        // bottom: 0;
+        // right: 0;
+        // position: absolute;
     }
 }

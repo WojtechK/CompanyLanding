@@ -1,14 +1,22 @@
-@import './_variables';
-@import './_header.scss';
+@import './shared/variables';
+@import './shared/mixins';
+@import './hero-section';
 @import './about';
+@import './portfolio';
+@import './contact';
 
 * {
     padding: 0;
     margin: 0;
 }
 
-.container { 
+html {
+    scroll-behavior: smooth;
+  }
+
+.page-container { 
     width: 100%;
     background: $white;
     font-family: $font-family;
+    overflow-x: hidden;
 }
