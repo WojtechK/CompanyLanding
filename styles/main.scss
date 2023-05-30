@@ -1,7 +1,9 @@
 @import './shared/variables';
 @import './shared/mixins';
+@import './shared/animation';
 @import './hero-section';
 @import './about';
+@import './offer';
 @import './portfolio';
 @import './contact';
 
@@ -12,6 +14,10 @@
 
 html {
     scroll-behavior: smooth;
+  }
+
+  h2, h3, h4, h5 {
+    font-size: 1.6em;
   }
 
 .page-container { 

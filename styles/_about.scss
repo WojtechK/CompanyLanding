@@ -1,0 +1,27 @@
+@import './shared/variables';
+@import './shared/mixins';
+
+#about {       
+    padding: 84px 0;
+    position: relative;
+    background-color: $gray-light;
+
+    .about-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            margin-bottom: 40px;
+        }
+    
+        .description-text {
+            max-width: 1000px;
+            margin: 0 84px; 
+            display: flex;
+            align-items: center;
+            
+            @include paragraph-typography;
+        }
+    }
+}
