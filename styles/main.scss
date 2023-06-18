@@ -5,7 +5,8 @@
 @import './about';
 @import './offer';
 @import './portfolio';
-@import './contact';
+@import './footer';
+@import './header';
 
 * {
     padding: 0;
@@ -14,10 +15,6 @@
 
 html {
     scroll-behavior: smooth;
-  }
-
-  h2, h3, h4, h5 {
-    font-size: 1.6em;
   }
 
 .page-container { 

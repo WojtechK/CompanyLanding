@@ -1,6 +1,6 @@
 @import "./shared/variables";
 
-#portfolio {
+.portfolio {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -8,14 +8,15 @@
   background: $gray-dark;
   overflow: hidden;
   padding: 84px 0;
-  h2 {
+
+  &__title {
     @include section-title-typography;
     color: $theme-color;
     text-shadow: 2px 2px 4px $font-color;
     margin-bottom: 40px;
   }
 
-  .slider-container {
+  &__slider {
     width: 100%;
     transform-style: preserve-3d;
     display: flex;
@@ -27,13 +28,13 @@
       display: none;
     }
 
-    .cards {
+    &-cards {
       position: relative;
       width: 100%;
       height: 500px;
       margin-bottom: 20px;
 
-      .card {
+      &-item {
         position: absolute;
         width: 60%;
         height: 100%;
@@ -53,25 +54,25 @@
       }
     }
 
-    #item-1:checked ~ .cards #slide-3,
-    #item-2:checked ~ .cards #slide-1,
-    #item-3:checked ~ .cards #slide-2 {
+    #item-1:checked ~ .portfolio__slider-cards #slide-3,
+    #item-2:checked ~ .portfolio__slider-cards #slide-1,
+    #item-3:checked ~ .portfolio__slider-cards #slide-2 {
       transform: translatex(-40%) scale(0.8);
       opacity: 0.4;
       z-index: 0;
     }
 
-    #item-1:checked ~ .cards #slide-2,
-    #item-2:checked ~ .cards #slide-3,
-    #item-3:checked ~ .cards #slide-1 {
+    #item-1:checked ~ .portfolio__slider-cards #slide-2,
+    #item-2:checked ~ .portfolio__slider-cards #slide-3,
+    #item-3:checked ~ .portfolio__slider-cards #slide-1 {
       transform: translatex(40%) scale(0.8);
       opacity: 0.4;
       z-index: 0;
     }
 
-    #item-1:checked ~ .cards #slide-1,
-    #item-2:checked ~ .cards #slide-2,
-    #item-3:checked ~ .cards #slide-3 {
+    #item-1:checked ~ .portfolio__slider-cards #slide-1,
+    #item-2:checked ~ .portfolio__slider-cards #slide-2,
+    #item-3:checked ~ .portfolio__slider-cards #slide-3 {
       transform: translatex(0) scale(1);
       opacity: 1;
       z-index: 1;

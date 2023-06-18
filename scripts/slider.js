@@ -1,4 +1,4 @@
-const slides = document.querySelectorAll('.slider-container input[name="slider"]');
+const slides = document.querySelectorAll('.portfolio__slider input[name="slider"]');
 
 let activeIndex = 0;
 setInterval(() => {

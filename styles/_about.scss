@@ -1,21 +1,21 @@
 @import './shared/variables';
 @import './shared/mixins';
 
-#about {       
+.about {       
     padding: 84px 0;
     position: relative;
     background-color: $gray-light;
 
-    .about-text {
+    &__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        h2 {
+        &-title {
             margin-bottom: 40px;
         }
     
-        .description-text {
+        &-description {
             max-width: 1000px;
             margin: 0 84px; 
             display: flex;
