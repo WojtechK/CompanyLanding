@@ -12,13 +12,19 @@
     background-image: url("../assets/header.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+   background-attachment: fixed;
     position: absolute;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
     opacity: 0.4;
+  }
+
+   @media (max-width: $Large) {
+    &::before {
+      background-attachment: scroll;
+    }
   }
 
   &__intro {
@@ -102,7 +108,8 @@
         }
 
         &:focus {
-          outline: 0 solid transparent;
+          outline: 4px solid white;
+          outline-offset: 4px;
         }
 
         &:focus:not(:focus-visible) {
