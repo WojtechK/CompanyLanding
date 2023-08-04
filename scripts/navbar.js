@@ -30,6 +30,8 @@ function toggleMobileMenu() {
 }
 
 function closeMobileMenu() {
+  setTimeout(() => {
     mobileMenu.classList.remove("header-mobile-menu-list--open");
     mobileMenuCheckbox.checked = false;
+  }, 200);
 }

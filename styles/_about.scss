@@ -22,6 +22,11 @@
             align-items: center;
             
             @include paragraph-typography;
+
+            @media (max-width: $Medium) {
+                font-size: 0.9rem;
+                margin: 0 24px;
+            }
         }
     }
 }

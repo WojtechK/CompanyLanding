@@ -30,6 +30,7 @@
   &__intro {
     width: 100%;
     display: flex;
+    justify-content: center;
     color: $white;
     position: absolute;
     top: 0;
@@ -55,11 +56,10 @@
           content: "";
           display: block;
           height: 8px;
-          top: 100%;
+          top: 105%;
           position: absolute;
           background: $theme-color;
           width: 100%;
-          left: 5%;
           transform: skewX(40deg);
         }
       }
@@ -69,7 +69,7 @@
         line-height: 2.2rem;
         letter-spacing: 1px;
         text-align: center;
-        margin: 24px 64px;
+        margin: 24px 0;
       }
 
       &-button {
@@ -118,6 +118,14 @@
 
         &:not(:disabled):active {
           transform: translateY(0.125rem);
+        }
+      }
+
+      @media (max-width: $Medium) {
+        margin: auto 24px;
+        &-text {
+          font-size: 1.2rem;
+          line-height: 1.8rem;
         }
       }
     }
