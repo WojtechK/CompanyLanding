@@ -1,32 +1,32 @@
-@import './shared/variables';
-@import './shared/mixins';
+@import "./shared/variables";
+@import "./shared/mixins";
 
-.about {       
-    padding: 84px 0;
-    position: relative;
-    background-color: $gray-light;
+.about {
+  padding: 84px 0;
+  position: relative;
+  background-color: $gray-light;
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        &-title {
-            margin-bottom: 40px;
-        }
-    
-        &-description {
-            max-width: 1000px;
-            margin: 0 84px; 
-            display: flex;
-            align-items: center;
-            
-            @include paragraph-typography;
-
-            @media (max-width: $Medium) {
-                font-size: 0.9rem;
-                margin: 0 24px;
-            }
-        }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-title {
+      margin-bottom: 40px;
     }
+
+    &-description {
+      max-width: 1000px;
+      margin: 0 84px;
+      display: flex;
+      align-items: center;
+
+      @include paragraph-typography;
+
+      @media (max-width: $Medium) {
+        font-size: 0.9rem;
+        margin: 0 24px;
+      }
+    }
+  }
 }

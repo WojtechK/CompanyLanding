@@ -1,80 +1,79 @@
-@import './shared/variables';
-@import './shared/mixins';
+@import "./shared/variables";
+@import "./shared/mixins";
 
 .footer {
-    background-color: rgba($theme-color, 0.6);
-    display: block;
-    position: relative;
-    &::after {
-        content: "";
-        background-size: cover;
-        background-position: bottom;
-        background-image: url('../assets/footer.jpg');
-        background-attachment: fixed;
-        opacity: 0.1;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
+  background-color: rgba($theme-color, 0.6);
+  display: block;
+  position: relative;
+  &::after {
+    content: "";
+    background-size: cover;
+    background-position: bottom;
+    background-image: url("../assets/footer.jpg");
+    background-attachment: fixed;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  &__content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+    &-title {
+      display: flex;
+      align-items: center;
+      margin: 40px;
+      @include section-title-typography;
+      color: $font-color;
+      text-shadow: 1px 1px 5px rgba($white, 0.2);
     }
 
-    &__content {
-        height: 100%;
+    &-info {
+      display: flex;
+
+      &-item {
         display: flex;
-        justify-content: space-between;
-        flex-direction: column;
         align-items: center;
-
-        &-title {
-            display: flex;
-            align-items: center;
-            margin: 40px;
-            @include section-title-typography;
-            color: $font-color;
-            text-shadow: 1px 1px 5px rgba($white, 0.2);
-
+        justify-content: flex-start;
+        margin: 0 30px 30px 30px;
+        transition: $transition-time;
+        p {
+          margin: 10px;
+          @include paragraph-typography;
+          color: $font-color;
         }
+      }
 
-        &-info {
-            display: flex;
-
-            &-item {
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                margin: 0 30px 30px 30px;
-                transition: $transition-time;          
-                p {
-                    margin: 10px;
-                    @include paragraph-typography;
-                    color: $font-color;
-                }
-            }
-            
-            &:hover {
-                cursor: pointer;
-                transform: scale(2);
-            }
-        }
-
-        &-copyright {
-            p {
-                margin-bottom: 30px;
-                @include paragraph-typography;
-                color: $font-color;
-            }
-        }
+      &:hover {
+        cursor: pointer;
+        transform: scale(2);
+      }
     }
+
+    &-copyright {
+      p {
+        margin-bottom: 30px;
+        @include paragraph-typography;
+        color: $font-color;
+      }
+    }
+  }
 }
 
 @media (max-width: $Medium) {
-    .footer {
-        &__content {
-            justify-content: flex-start;
-        }
-        &__content-info {
-           flex-direction: column;
-        }
+  .footer {
+    &__content {
+      justify-content: flex-start;
     }
+    &__content-info {
+      flex-direction: column;
+    }
+  }
 }

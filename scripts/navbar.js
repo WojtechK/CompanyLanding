@@ -1,15 +1,19 @@
 const header = document.querySelector(".header");
 const menuHamburger = document.querySelector("#menu_checkbox");
 const mobileMenu = document.querySelector(".header-mobile-menu-list");
-const mobileMenuLinks = document.querySelectorAll(".header-mobile-menu-list__item a");
-const mobileMenuCheckbox = document.querySelector('#menu_checkbox');
+const mobileMenuLinks = document.querySelectorAll(
+  ".header-mobile-menu-list__item a"
+);
+const mobileMenuCheckbox = document.querySelector("#menu_checkbox");
 
 /**
  * events listeners
  */
 window.onscroll = toggleStickyNavbar;
 menuHamburger.addEventListener("click", toggleMobileMenu);
-mobileMenuLinks.forEach(link => link.addEventListener("click", closeMobileMenu));
+mobileMenuLinks.forEach((link) =>
+  link.addEventListener("click", closeMobileMenu)
+);
 
 /**
  * handlers
@@ -17,7 +21,7 @@ mobileMenuLinks.forEach(link => link.addEventListener("click", closeMobileMenu))
 function toggleStickyNavbar() {
   let headerPosition = header.offsetTop;
   let scroll = window.scrollY;
-  
+
   if (scroll > headerPosition) {
     header.classList.add("header--sticky");
   } else {
@@ -26,7 +30,7 @@ function toggleStickyNavbar() {
 }
 
 function toggleMobileMenu() {
-    mobileMenu.classList.toggle("header-mobile-menu-list--open");
+  mobileMenu.classList.toggle("header-mobile-menu-list--open");
 }
 
 function closeMobileMenu() {

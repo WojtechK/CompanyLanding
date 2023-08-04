@@ -1,14 +1,13 @@
 @mixin section-title-typography {
-    font-size: 1.6rem;
-    font-weight: 600;
-    letter-spacing: 2px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 @mixin paragraph-typography {
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.8rem;
-    letter-spacing: 0px;
-    text-align: justify;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  letter-spacing: 0px;
+  text-align: justify;
 }
-

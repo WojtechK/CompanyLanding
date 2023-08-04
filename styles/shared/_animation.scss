@@ -1,10 +1,10 @@
 .element-to-animate {
-    opacity: 0;
-    transform:scale(0.95);
-    transition: opacity .4s ease-in-out, transform .4s ease-in-out;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
 .fade-in {
-    opacity: 1;
-    transform:scale(1);
+  opacity: 1;
+  transform: scale(1);
 }

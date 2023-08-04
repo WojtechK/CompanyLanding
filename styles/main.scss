@@ -1,26 +1,27 @@
-@import './shared/variables';
-@import './shared/mixins';
-@import './shared/animation';
-@import './hero-section';
-@import './about';
-@import './offer';
-@import './portfolio';
-@import './footer';
-@import './header';
+@import "./shared/variables";
+@import "./shared/mixins";
+@import "./shared/animation";
+@import "./hero-section";
+@import "./about";
+@import "./offer";
+@import "./portfolio";
+@import "./footer";
+@import "./header";
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
-html, body {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-  }
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
-.page-container { 
-    width: 100vw;
-    background: $white;
-    font-family: $font-family;
-    overflow-x: hidden;
+.page-container {
+  width: 100vw;
+  background: $white;
+  font-family: $font-family;
+  overflow-x: hidden;
 }
