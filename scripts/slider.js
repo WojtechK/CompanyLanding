@@ -4,6 +4,10 @@ const slides = document.querySelectorAll(
 const sliderElement = document.querySelector(".portfolio__slider-cards");
 
 let activeIndex = 0;
+
+/**
+ * switch slides every 5 seconds
+ */
 setInterval(() => {
   for (let i = 0; i < slides.length; i++) {
     slides[i].checked = false;
@@ -12,6 +16,9 @@ setInterval(() => {
   slides[activeIndex].checked = true;
 }, 5000);
 
+/**
+ * handle swipe on mobile with touch events
+ */
 let touchStartX = 0;
 let touchEndX = 0;
 

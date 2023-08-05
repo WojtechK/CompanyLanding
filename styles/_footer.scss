@@ -17,6 +17,7 @@
     bottom: 0;
     right: 0;
     position: absolute;
+    z-index: -1;
   }
 
   &__content {
@@ -49,11 +50,17 @@
           @include paragraph-typography;
           color: $font-color;
         }
-      }
 
-      &:hover {
-        cursor: pointer;
-        transform: scale(2);
+        &-link {
+          text-decoration: none;
+          margin: 10px;
+          @include paragraph-typography;
+          color: $font-color;          
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
 
